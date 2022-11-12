@@ -20,6 +20,16 @@ class MyApp extends StatelessWidget {
             Icon(Icons.search),
           ],
         ),
+        body: SizedBox(
+          height: 60,
+          width: 226,
+          child: Text(
+            "Discover the most modern funrniture",
+            style: TextStyle(
+              fontSize: 22,
+            ),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.grey,
