@@ -26,13 +26,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     Container(
                       height: 57.6,
                       width: 57.6,
-                      padding: EdgeInsets.all(14.4),
-                      child: Icon(Icons.menu),
+                      padding: const EdgeInsets.all(14.4),
+                      child: const Icon(Icons.menu),
                     ),
                     Container(
                       height: 57.6,
                       width: 200,
-                      padding: EdgeInsets.all(14.4),
+                      padding: const EdgeInsets.all(14.4),
                       child: Center(
                         child: Text(
                           "Home",
@@ -43,14 +43,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     Container(
                       height: 57.6,
                       width: 57.6,
-                      padding: EdgeInsets.all(14.4),
-                      child: Icon(Icons.search),
+                      padding: const EdgeInsets.all(14.4),
+                      child: const Icon(Icons.search),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 14.4, left: 14.4),
+                padding: const EdgeInsets.only(top: 14.4, left: 14.4),
                 child: Text(
                   "Discover the most\nmodern furniture",
                   style: GoogleFonts.poppins(
@@ -71,7 +71,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 50,
                         child: Text(
                           "All",
-                          style: TextStyle(color: Colors.black),
+                          style: GoogleFonts.poppins(
+                              fontSize: 12, color: Colors.black),
                         ),
                       ),
                       SizedBox(
@@ -79,10 +80,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 80,
                         child: Text(
                           "Living Room",
-                          style: TextStyle(color: Colors.black),
+                          style: GoogleFonts.poppins(
+                              fontSize: 12, color: Colors.black),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28.8,
                         width: 20,
                       ),
@@ -91,10 +93,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 80,
                         child: Text(
                           "Bedroom",
-                          style: TextStyle(color: Colors.black),
+                          style: GoogleFonts.poppins(
+                              fontSize: 12, color: Colors.black),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28.8,
                         width: 10,
                       ),
@@ -103,10 +106,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 80,
                         child: Text(
                           "Dining Room",
-                          style: TextStyle(color: Colors.black),
+                          style: GoogleFonts.poppins(
+                              fontSize: 12, color: Colors.black),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28.8,
                         width: 20,
                       ),
@@ -115,16 +119,47 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 80,
                         child: Text(
                           "Kitchen",
-                          style: TextStyle(color: Colors.black),
+                          style: GoogleFonts.poppins(
+                              fontSize: 12, color: Colors.black),
                         ),
                       ),
                     ],
                   ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.all(14.4),
+                child: SizedBox(
+                  height: 28.8,
+                  child: Text(
+                    "Recommended Furnitures",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              GridView(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                ),
+                children: <Widget>[
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                  FlutterLogo(),
+                ],
+              ),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          Icon(
+            Icons.home,
+          ),
+        ],
       ),
     );
   }
