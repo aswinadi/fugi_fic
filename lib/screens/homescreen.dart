@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fugi_fic/util/furniture_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: GoogleFonts.poppins(fontSize: 16),
           ),
         ),
+        // ignore: prefer_const_literals_to_create_immutables
         actions: [
           const Padding(
             padding: EdgeInsets.only(right: 14.4),
@@ -118,13 +119,43 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 20,
           ),
+          // Recommended furniture
           const Padding(
             padding: EdgeInsets.only(left: 14.4),
             child: Text('Recommended furniture'),
           ),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                FurnitureTile(
+                  furnitureImagePath: 'assets/images/furniture_composition.png',
+                  furnitureName: 'Stylish Chair',
+                  furniturePrice: '170',
+                  furnitureRating: '4.8',
+                ),
+                FurnitureTile(
+                  furnitureImagePath: 'assets/images/master_bedroom.png',
+                  furnitureName: 'Modern Table',
+                  furniturePrice: '75',
+                  furnitureRating: '4.9',
+                ),
+                FurnitureTile(
+                  furnitureImagePath: 'assets/images/modern_furniture.png',
+                  furnitureName: 'Wooden Console',
+                  furniturePrice: '240',
+                  furnitureRating: '4.7',
+                ),
+                FurnitureTile(
+                  furnitureImagePath: 'assets/images/vintage_furniture.png',
+                  furnitureName: 'Brown Armchair',
+                  furniturePrice: '210',
+                  furnitureRating: '4.9',
+                ),
+              ],
+            ),
+          ),
         ],
-
-        // Recommended furniture
       ),
     );
   }
