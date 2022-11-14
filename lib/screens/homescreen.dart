@@ -125,8 +125,10 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Text('Recommended furniture'),
           ),
           Expanded(
-            child: ListView(
-              scrollDirection: Axis.vertical,
+            child: GridView(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              scrollDirection: Axis.horizontal,
               children: [
                 FurnitureTile(
                   furnitureImagePath: 'assets/images/furniture_composition.png',

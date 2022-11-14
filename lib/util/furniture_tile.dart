@@ -20,9 +20,10 @@ class FurnitureTile extends StatelessWidget {
         bottom: 14.4,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(14.4),
+        padding: const EdgeInsets.all(10),
         child: Container(
           width: 180,
+          height: 220,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Colors.grey,
