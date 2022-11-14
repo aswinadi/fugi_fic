@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: GridView(
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
               children: [
                 FurnitureTile(
                   furnitureImagePath: 'assets/images/furniture_composition.png',
